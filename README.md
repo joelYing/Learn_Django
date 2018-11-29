@@ -8,30 +8,32 @@ Django学习
 3. 没有/home/xxx/.ssh
 ssh-keygen -t rsa -C "youremail@example.com"
 4. 添加SSH Key到github
-5. makedir mygit
-   cd mygit
-   git init
-   git add xxx(文件或目录)
-   git commit -m "文字说明"
-   git remote add origin git@github.com:xxx/xxx.git
-   git fetch/ git pull origin master
-   git push -u origin master
+5. makedir mygit  
+   cd mygit  
+   git init  
+   git add xxx(文件或目录)  
+   git commit -m "文字说明"  
+   git remote add origin git@github.com:xxx/xxx.git  
+   git fetch/ git pull origin master  
+   git push -u origin master  
 
 ## Ubuntu安装虚拟环境
 
-Sudo pip install virtualenv
-Sudo pip install virtualenvwrapper
+Sudo pip install virtualenv  
+Sudo pip install virtualenvwrapper  
 
 若出现 sudo pip 找不到命令，则更换 /etc/apt/sources.list 的内容为清华源 
 > https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 
-> Python pip： https://pypi.tuna.tsinghua.edu.cn/simple 
+Python pip： https://pypi.tuna.tsinghua.edu.cn/simple 
 
-然后 sudo apt-get update
-接着 sudo apt-get install python-pip 或 sudo apt-get install python3-pip 安装对应的pip
+sudo apt-get update  
+sudo apt-get install python-pip / sudo apt-get install python3-pip  
+
+安装对应的pip
 再重复上述安装虚拟环境
 
-创建虚拟环境管理目录
+### 创建虚拟环境管理目录
 
 mkdir ~/.virtualenvs
 
@@ -41,10 +43,10 @@ sudo vim ~/.bashrc
 
 在.bashrc的末尾增加下面内容
 
-export WORKON_HOME=$HOME/.virtualenvs  # 所有虚拟环境存储的目录
-source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.virtualenvs  # 所有虚拟环境存储的目录  
+source /usr/local/bin/virtualenvwrapper.sh  
 
-启用配置文件
+### 启用配置文件
 
 source ~/.bashrc
 
