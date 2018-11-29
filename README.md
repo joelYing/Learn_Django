@@ -15,7 +15,8 @@ ssh-keygen -t rsa -C "youremail@example.com"
    git commit -m "文字说明"  
    git remote add origin git@github.com:xxx/xxx.git  
    git fetch/ git pull origin master  
-   git push -u origin master  
+   git push -u origin master (first time)  
+   git push origin master (next times)     
 
 ## Ubuntu安装虚拟环境
 
