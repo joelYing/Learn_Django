@@ -3,6 +3,10 @@ Django学习
 
 ## Linux环境下使用Git
 
+参考
+   
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000  
+
 1. Github新建仓库
 2. 创建SSH Key 看在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件
 3. 没有/home/xxx/.ssh
