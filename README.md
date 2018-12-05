@@ -1,3 +1,4 @@
+[TOC]
 # Learn_Django
 Django学习
 
@@ -5,7 +6,7 @@ Django学习
 
 参考
    
-https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000  
+[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)  
 
 1. Github新建仓库
 2. 创建SSH Key 看在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件
@@ -62,19 +63,19 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 
 ### Git基本命令
 
-git status  # 查看当前仓库状态  
-git diff readme.txt  # 查看修改的部分  
-git diff HEAD -- readme.txt  # 命令可以查看工作区和版本库里面最新版本的区别  
-git log  # 查看最近到最远的提交日志  
-git reset --hard HEAD^      # 回退到上一个版本 HEAD表示当前版本 HEAD^表示上一个 HEAD^^表示上上个，前一百个表示：HEAD~100  
-git reset --hard commit_id   # 回到某个版本id对应的版本  
-git reflog                  # 查看记录的每一次版本命令 可以从中找到之前版本的id 回退到该版本  
-git checkout -- readme.txt   # 意思就是，把readme.txt文件在工作区的修改全部撤销；若修改之后还提交到了暂存区（add），分两步 git reset HEAD <file>再使用 checkout  
-rm readme.txt             # 删除当前工作区文件  
-git rm readme.txt  git commit -m “remove”         # 删除版本库中文件 并提交  
-git rm readme.txt  git commit -m “remove”  git push        # 删除远程仓库中的文件 并提交  
-git push origin master        # 把本地master分支推送到远程库  
-git clone (ssh…)             # 克隆远程到本地  
+git status&nbsp;&nbsp;&nbsp;# 查看当前仓库状态  
+git diff readme.txt&nbsp;&nbsp;&nbsp;# 查看修改的部分  
+git diff HEAD -- readme.txt  &nbsp;&nbsp;&nbsp;# 命令可以查看工作区和版本库里面最新版本的区别  
+git log  &nbsp;&nbsp;&nbsp;# 查看最近到最远的提交日志  
+git reset --hard HEAD^ &nbsp;&nbsp;&nbsp;     # 回退到上一个版本 HEAD表示当前版本 HEAD^表示上一个 HEAD^^表示上上个，前一百个表示：HEAD~100  
+git reset --hard commit_id &nbsp;&nbsp;&nbsp;  # 回到某个版本id对应的版本  
+git reflog &nbsp;&nbsp;&nbsp;                 # 查看记录的每一次版本命令 可以从中找到之前版本的id 回退到该版本  
+git checkout -- readme.txt &nbsp;&nbsp;&nbsp;  # 意思就是，把readme.txt文件在工作区的修改全部撤销；若修改之后还提交到了暂存区（add），分两步 git reset HEAD file 再使用 checkout  
+rm readme.txt  &nbsp;&nbsp;&nbsp;           # 删除当前工作区文件  
+git rm readme.txt &nbsp;&nbsp; git commit -m “remove”  &nbsp;&nbsp;&nbsp;       # 删除版本库中文件 并提交  
+git rm readme.txt &nbsp;&nbsp; git commit -m “remove” &nbsp;&nbsp; git push  &nbsp;&nbsp;&nbsp;      # 删除远程仓库中的文件 并提交  
+git push origin master  &nbsp;&nbsp;&nbsp;      # 把本地master分支推送到远程库  
+git clone (ssh…)  &nbsp;&nbsp;&nbsp;           # 克隆远程到本地  
 
 ### Git 添加远程仓库
 
@@ -224,13 +225,13 @@ git branch -d dev                       # 合并之后删除分支 dev
 
 这种情况下 Git 无法快速合并，会有冲突，解决冲突的办法就是把Git合并失败的文件手动编辑为我们希望的内容，再提交
 
-git log --graph                              # 看分支合并图  
-git log --graph --pretty=oneline --abbrev-commit   # 分支合并图  
+git log --graph   &nbsp;&nbsp;&nbsp;#                            看分支合并图  
+git log --graph --pretty=oneline --abbrev-commit  &nbsp;&nbsp;&nbsp; # 分支合并图  
 
 
 ### 多人协作
-git remote                                 # 查看远程仓库信息  
-git remote -v                              # 显示详细信息  
+git remote              &nbsp;&nbsp;&nbsp;                   # 查看远程仓库信息  
+git remote -v           &nbsp;&nbsp;&nbsp;                   # 显示详细信息  
 
 
 ## Ubuntu安装虚拟环境
