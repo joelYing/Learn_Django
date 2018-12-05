@@ -31,26 +31,26 @@ Git-2.19.2-64-bit.exe
 
 能打开 git bash 命令行界面即安装成功
 
-设置输入 名字、email     git config --global 表示这台机器上所有Git仓库都使用此配置
-git config --global user.name "Your Name"
-git config --global user.email “email@example.com”
+设置输入 名字、email     git config --global      表示这台机器上所有Git仓库都使用此配置  
+`git config --global user.name "Your Name"`  
+`git config --global user.email “email@example.com”`
 
-git config --global core.autocrlf false  禁止自动转换为crlf
+`git config --global core.autocrlf false`       禁止自动转换为crlf
 
 ### 新建一个空目录，将其变成Git可以管理的仓库
 
-git init 之后当前目录下会有 .git（版本库）
-mkdir mygit
-cd mygit
+git init 之后当前目录下会有 .git（版本库）  
+`mkdir mygit`   
+`cd mygit`    
 
-git init
+`git init`
 
 ### 写一个文件添加到Git仓库
 
-Vi readme.txt
+`Vi readme.txt`
 
-git add readme.txt  # add可以多次添加
-git commit -m “test readme”  # 添加提交说明
+`git add readme.txt`  # add可以多次添加  
+`git commit -m “test readme”`  # 添加提交说明  
 
 ### Git区域
 
@@ -62,19 +62,19 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 
 ### Git基本命令
 
-git status  # 查看当前仓库状态
-git diff readme.txt  # 查看修改的部分
-git diff HEAD -- readme.txt  # 命令可以查看工作区和版本库里面最新版本的区别
-git log  # 查看最近到最远的提交日志
-git reset --hard HEAD^      # 回退到上一个版本 HEAD表示当前版本 HEAD^表示上一个 HEAD^^表示上上个，前一百个表示：HEAD~100
-git reset --hard commit_id   # 回到某个版本id对应的版本
-git reflog                  # 查看记录的每一次版本命令 可以从中找到之前版本的id 回退到该版本
-git checkout -- readme.txt   # 意思就是，把readme.txt文件在工作区的修改全部撤销；若修改之后还提交到了暂存区（add），分两步 git reset HEAD <file>再使用 checkout
-rm readme.txt             # 删除当前工作区文件
-git rm readme.txt  git commit -m “remove”         # 删除版本库中文件 并提交
-git rm readme.txt  git commit -m “remove”  git push        # 删除远程仓库中的文件 并提交
-git push origin master        # 把本地master分支推送到远程库
-git clone (ssh…)             # 克隆远程到本地
+git status  # 查看当前仓库状态  
+git diff readme.txt  # 查看修改的部分  
+git diff HEAD -- readme.txt  # 命令可以查看工作区和版本库里面最新版本的区别  
+git log  # 查看最近到最远的提交日志  
+git reset --hard HEAD^      # 回退到上一个版本 HEAD表示当前版本 HEAD^表示上一个 HEAD^^表示上上个，前一百个表示：HEAD~100  
+git reset --hard commit_id   # 回到某个版本id对应的版本  
+git reflog                  # 查看记录的每一次版本命令 可以从中找到之前版本的id 回退到该版本  
+git checkout -- readme.txt   # 意思就是，把readme.txt文件在工作区的修改全部撤销；若修改之后还提交到了暂存区（add），分两步 git reset HEAD <file>再使用 checkout  
+rm readme.txt             # 删除当前工作区文件  
+git rm readme.txt  git commit -m “remove”         # 删除版本库中文件 并提交  
+git rm readme.txt  git commit -m “remove”  git push        # 删除远程仓库中的文件 并提交  
+git push origin master        # 把本地master分支推送到远程库  
+git clone (ssh…)             # 克隆远程到本地  
 
 ### Git 添加远程仓库
 
@@ -89,8 +89,8 @@ git clone (ssh…)             # 克隆远程到本地
 
 若远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令
 
-git remote add origin “git@github.com:michaelliao/learngit.git“  # origin 为远程库名字 后面跟的是GitHub对应仓库的ssh
-git push -u origin master                                   # 推送本地库中所有内容至远程库
+`git remote add origin “git@github.com:michaelliao/learngit.git“`  # origin 为远程库名字 后面跟的是GitHub对应仓库的ssh  
+`git push -u origin master`                                        # 推送本地库中所有内容至远程库  
 
 #### 若已经有远程仓库
 则可以克隆一个到本地库
@@ -141,7 +141,7 @@ From github.com:joelYing/All_Spider
 fatal: refusing to merge unrelated histories
 ```
 
-参考 https://www.centos.bz/2018/03/git-%E5%87%BA%E7%8E%B0-fatal-refusing-to-merge-unrelated-histories-%E9%94%99%E8%AF%AF/
+参考 [git-出现-fatal-refusing-to-merge-unrelated-histories-错误](https://www.centos.bz/2018/03/git-%E5%87%BA%E7%8E%B0-fatal-refusing-to-merge-unrelated-histories-%E9%94%99%E8%AF%AF/)
 
 **git pull 失败 ,提示：fatal: refusing to merge unrelated histories**
 
@@ -224,13 +224,13 @@ git branch -d dev                       # 合并之后删除分支 dev
 
 这种情况下 Git 无法快速合并，会有冲突，解决冲突的办法就是把Git合并失败的文件手动编辑为我们希望的内容，再提交
 
-git log --graph                              # 看分支合并图
-git log --graph --pretty=oneline --abbrev-commit   # 分支合并图
+git log --graph                              # 看分支合并图  
+git log --graph --pretty=oneline --abbrev-commit   # 分支合并图  
 
 
 ### 多人协作
-git remote                                 # 查看远程仓库信息
-git remote -v                              # 显示详细信息
+git remote                                 # 查看远程仓库信息  
+git remote -v                              # 显示详细信息  
 
 
 ## Ubuntu安装虚拟环境
