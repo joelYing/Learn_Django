@@ -245,7 +245,21 @@ git remote                                 # 查看远程仓库信息
 git remote -v                              # 显示详细信息  
 ```
 
-### 
+### 从远程仓库获取最新代码合并到本地分支--推荐
+
+```
+//查询当前远程的版本
+$ git remote -v
+//获取最新代码到本地(本地当前分支为[branch]，获取的远端的分支为[origin/branch])
+$ git fetch origin master  [示例1：获取远端的origin/master分支]
+$ git fetch origin dev [示例2：获取远端的origin/dev分支]
+//查看版本差异
+$ git log -p master..origin/master [示例1：查看本地master与远端origin/master的版本差异]
+$ git log -p dev..origin/dev   [示例2：查看本地dev与远端origin/dev的版本差异]
+//合并最新代码到本地分支
+$ git merge origin/master  [示例1：合并远端分支origin/master到当前分支]
+$ git merge origin/dev [示例2：合并远端分支origin/dev到当前分支]
+```
 
 
 ## Ubuntu安装虚拟环境
