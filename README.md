@@ -261,6 +261,8 @@ $ git merge origin/master  [示例1：合并远端分支origin/master到当前�
 $ git merge origin/dev [示例2：合并远端分支origin/dev到当前分支]
 ```
 
+### Git 注意
+git 不会提交以 “data” 命名的文件
 
 ## Ubuntu安装虚拟环境
 
