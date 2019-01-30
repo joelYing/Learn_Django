@@ -219,6 +219,30 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 **Success**
 
+#### 另一个 git pull 错误  
+> error Your local changes to the following files would be overwritten by merge
+
+举个例子，在公司用台式机更新完代码提交到远程库，回到家在笔记本上，对同一个项目想要接着改代码  
+结果在 pull 之前就已经改了代码，这就导致 git pull 会出现如上错误
+
+此时 **git pull origin master --allow-unrelated-histories** 无用
+
+有效方法参考 <https://blog.csdn.net/misakaqunianxiatian/article/details/51103734>
+
+1. 如果你想保留刚才本地修改的代码，并把git服务器上的代码pull到本地（本地刚才修改的代码将会被暂时封存起来）  
+```
+git stash
+git pull origin master
+git stash pop
+```
+如此一来，服务器上的代码更新到了本地，而且你本地修改的代码也没有被覆盖，之后使用add，commit，push 命令即可更新本地代码到服务器了
+
+2. 如果你想完全地覆盖本地的代码，只保留服务器端代码，则直接回退到上一个版本，再进行pull  
+```
+git reset --hard
+git pull origin master
+```
+
 ---
 
 ### Git 分支管理
