@@ -264,6 +264,23 @@ $ git merge origin/dev [示例2：合并远端分支origin/dev到当前分支]
 ### Git 注意
 git 不会提交以 “data” 命名的文件
 
+### git 提交至远程错误三
+```
+情况 : 本已新建了一个 project ，然后远程建了一个仓库，接着进入project的根目录，git init
+       然后 git remote... 
+       git add .
+       git commit -m "update"
+       git push -u origin master
+       开始报错
+```
+
+如下
+```
+error: failed to push some refs to 'git@github.com:joelYing/360kan.git'
+
+解决方法 : git push origin master --force 即可
+```
+
 ## Ubuntu安装虚拟环境
 
 Sudo pip install virtualenv  
