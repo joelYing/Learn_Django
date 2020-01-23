@@ -1,6 +1,3 @@
-# Learn_Django
-Django学习
-
 ## Linux环境下使用Git
 
 参考
